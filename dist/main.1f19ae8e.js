@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"node_modules/three/build/three.module.js":[function(require,module,exports) {
+})({"../node_modules/three/build/three.module.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36562,7 +36562,7 @@ if (typeof __THREE_DEVTOOLS__ !== 'undefined') {
   /* eslint-enable no-undef */
 
 }
-},{}],"node_modules/dat.gui/build/dat.gui.module.js":[function(require,module,exports) {
+},{}],"../node_modules/dat.gui/build/dat.gui.module.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39470,11 +39470,11 @@ var index = {
 };
 var _default = index;
 exports.default = _default;
-},{}],"node_modules/stats-js/build/stats.min.js":[function(require,module,exports) {
+},{}],"../node_modules/stats-js/build/stats.min.js":[function(require,module,exports) {
 var define;
 !function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):e.Stats=t()}(this,function(){"use strict";var c=function(){var n=0,l=document.createElement("div");function e(e){return l.appendChild(e.dom),e}function t(e){for(var t=0;t<l.children.length;t++)l.children[t].style.display=t===e?"block":"none";n=e}l.style.cssText="position:fixed;top:0;left:0;cursor:pointer;opacity:0.9;z-index:10000",l.addEventListener("click",function(e){e.preventDefault(),t(++n%l.children.length)},!1);var i=(performance||Date).now(),a=i,o=0,f=e(new c.Panel("FPS","#0ff","#002")),r=e(new c.Panel("MS","#0f0","#020"));if(self.performance&&self.performance.memory)var d=e(new c.Panel("MB","#f08","#201"));return t(0),{REVISION:16,dom:l,addPanel:e,showPanel:t,begin:function(){i=(performance||Date).now()},end:function(){o++;var e=(performance||Date).now();if(r.update(e-i,200),a+1e3<=e&&(f.update(1e3*o/(e-a),100),a=e,o=0,d)){var t=performance.memory;d.update(t.usedJSHeapSize/1048576,t.jsHeapSizeLimit/1048576)}return e},update:function(){i=this.end()},domElement:l,setMode:t}};return c.Panel=function(n,l,i){var a=1/0,o=0,f=Math.round,r=f(window.devicePixelRatio||1),d=80*r,e=48*r,c=3*r,p=2*r,u=3*r,s=15*r,m=74*r,h=30*r,y=document.createElement("canvas");y.width=d,y.height=e,y.style.cssText="width:80px;height:48px";var v=y.getContext("2d");return v.font="bold "+9*r+"px Helvetica,Arial,sans-serif",v.textBaseline="top",v.fillStyle=i,v.fillRect(0,0,d,e),v.fillStyle=l,v.fillText(n,c,p),v.fillRect(u,s,m,h),v.fillStyle=i,v.globalAlpha=.9,v.fillRect(u,s,m,h),{dom:y,update:function(e,t){a=Math.min(a,e),o=Math.max(o,e),v.fillStyle=i,v.globalAlpha=1,v.fillRect(0,0,d,s),v.fillStyle=l,v.fillText(f(e)+" "+n+" ("+f(a)+"-"+f(o)+")",c,p),v.drawImage(y,u+r,s,m-r,h,u,s,m-r,h),v.fillRect(u+m-r,s,r,h),v.fillStyle=i,v.globalAlpha=.9,v.fillRect(u+m-r,s,r,f((1-e/t)*h))}}},c});
 
-},{}],"node_modules/three-orbitcontrols/OrbitControls.js":[function(require,module,exports) {
+},{}],"../node_modules/three-orbitcontrols/OrbitControls.js":[function(require,module,exports) {
 /* three-orbitcontrols addendum */ var THREE = require('three');
 /**
  * @author qiao / https://github.com/qiao
@@ -40658,7 +40658,7 @@ THREE.MapControls.prototype = Object.create( THREE.EventDispatcher.prototype );
 THREE.MapControls.prototype.constructor = THREE.MapControls;
 /* three-orbitcontrols addendum */ module.exports = exports.default = THREE.OrbitControls;
 
-},{"three":"node_modules/three/build/three.module.js"}],"node_modules/open-simplex-noise/lib/constants.js":[function(require,module,exports) {
+},{"three":"../node_modules/three/build/three.module.js"}],"../node_modules/open-simplex-noise/lib/constants.js":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.p4D = exports.p3D = exports.p2D = exports.lookupPairs4D = exports.lookupPairs3D = exports.lookupPairs2D = exports.gradients4D = exports.gradients3D = exports.gradients2D = exports.base4D = exports.base3D = exports.base2D = exports.STRETCH_4D = exports.STRETCH_3D = exports.STRETCH_2D = exports.SQUISH_4D = exports.SQUISH_3D = exports.SQUISH_2D = exports.NORM_4D = exports.NORM_3D = exports.NORM_2D = void 0;
@@ -43959,7 +43959,7 @@ exports.p4D = [
     1
 ];
 
-},{}],"node_modules/open-simplex-noise/lib/index.js":[function(require,module,exports) {
+},{}],"../node_modules/open-simplex-noise/lib/index.js":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.makeNoise4D = exports.makeNoise3D = exports.makeNoise2D = void 0;
@@ -44255,7 +44255,7 @@ function shuffleSeed(seed) {
     return newSeed;
 }
 
-},{"./constants":"node_modules/open-simplex-noise/lib/constants.js"}],"node_modules/worley-noise/dist/worley-noise.js":[function(require,module,exports) {
+},{"./constants":"../node_modules/open-simplex-noise/lib/constants.js"}],"../node_modules/worley-noise/dist/worley-noise.js":[function(require,module,exports) {
 var define;
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
@@ -44651,7 +44651,7 @@ function dither(c, ditherLevel) {
     return c0;
   }
 }
-},{"three":"node_modules/three/build/three.module.js","dat.gui":"node_modules/dat.gui/build/dat.gui.module.js","stats-js":"node_modules/stats-js/build/stats.min.js","three-orbitcontrols":"node_modules/three-orbitcontrols/OrbitControls.js","open-simplex-noise":"node_modules/open-simplex-noise/lib/index.js","worley-noise":"node_modules/worley-noise/dist/worley-noise.js"}],"../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"three":"../node_modules/three/build/three.module.js","dat.gui":"../node_modules/dat.gui/build/dat.gui.module.js","stats-js":"../node_modules/stats-js/build/stats.min.js","three-orbitcontrols":"../node_modules/three-orbitcontrols/OrbitControls.js","open-simplex-noise":"../node_modules/open-simplex-noise/lib/index.js","worley-noise":"../node_modules/worley-noise/dist/worley-noise.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -44679,7 +44679,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57173" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52131" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -44855,5 +44855,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js","main.js"], null)
+},{}]},{},["../../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js","main.js"], null)
 //# sourceMappingURL=/main.1f19ae8e.js.map

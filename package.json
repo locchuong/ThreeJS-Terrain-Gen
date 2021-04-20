@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel ./src/index.html",
+    "prebuild-dev": "shx rm -rf dist/*",
+    "build-dev": "parcel build ./src/index.html --no-minify --public-url ./",
+    "prebuild": "shx rm -rf dist/*",
+    "build": "parcel build ./src/index.html --public-url ./",
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +22,8 @@
     "three-orbitcontrols": "^2.110.3",
     "worley-noise": "^2.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "shx": "^0.3.2"
+  },
   "description": ""
 }
